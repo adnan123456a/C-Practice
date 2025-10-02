@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <string.h>
-#include <math.h>
-int main () {
 
+int main () {
+    srand(time(NULL));
     char yourName[30] ;
     char crushName[30];
     printf("What's your name? :");
@@ -12,8 +13,10 @@ int main () {
     printf("Your Your Crush's Name :");
     fgets(crushName, sizeof(crushName),stdin );
     crushName[strlen(crushName)-1] = '\0';
-    double p =random();
-    int r = round(p/random());
+    int p =rand();
+    int max = 100 ;
+    int min = 0;
+    int r =( p % (max - min + 1)) + min ;
     if (r >= 80) {
         printf("Great \n");
         printf("%s and your %s's love score is %d",yourName,crushName,r);
