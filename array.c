@@ -12,10 +12,20 @@ int main () {
 
     //multi-array
 
-    char names[][3] = {{'a','b','d'},
+    char CHR[][3] = {{'a','b','d'},
                     {'e','c','f'}};
 // [][1] MEANS HOW MANY extra array we are going to push after first 
- printf("%c\n",names[0][0]);
+ printf("%c\n",CHR[0][0]);
 
+
+ //Array Of Strings
+    char names[][10] = {"Adnan","Fahmida","Abdullah"};
+    for (int i = 0; i < 3; i++) { // i < sizeof(names)/sizeof(names[0])
+        printf("%s\n",names[i]);
+    }
+    printf("%lu\n",sizeof(names));
+     printf("%lu\n",sizeof(names[0]));
+     //see each of them is 10 , and total is 30 .. if we devide them
+     //it becomes 3
     return 0;
 }
